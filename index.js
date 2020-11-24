@@ -16,6 +16,11 @@ switch(switchTest) {
   break;
 }
 
+function message() {
+  alert("surprise")
+}
+
+
 /*
 
   useful js to be aware of: 
