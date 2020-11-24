@@ -1,18 +1,18 @@
 let theGuess = document.getElementById("theGuess")
 
 randomGuess = (Math.floor(Math.random() * 10)) + 1
-
 theGuess.innerText = "?"
 
-function guesser(r) {
+theGuess.onclick = guesser
+
+function guesser(e) {
+  e.preventDefault()
   userGuess = prompt("Guess!")
   if (userGuess > randomGuess) {
     theGuess.innerText = "LOWER!"
   } else if (userGuess < randomGuess) {
     theGuess.innerText = "HIGHER!"
-  } else {
-    theGuess.innerText = r + " you got it!"
+  } else if (userGuess == randomGuess) {
+    theGuess.innerText = randomGuess + ", you got it!"
   }
 }
-
-guesser(randomGuess)
