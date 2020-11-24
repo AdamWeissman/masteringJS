@@ -27,14 +27,14 @@ function message2() {
 const thangs = document.querySelectorAll("thang")
 console.log(thangs)
 
-const ittyButtons = document.querySelectorAll("iterableButton")
+const ittyButtons = document.querySelectorAll(".iterableButton")
 const c = document.querySelector(".changling")  
 
-ittyButtons[0].onclick = c1()
-ittyButtons[1].onclick = c2()
-ittyButtons[2].onclick = c3()
-ittyButtons[3].onclick = c4()
-ittyButtons[4].onclick = c5()
+ittyButtons[0].onclick = c1
+ittyButtons[1].onclick = c2
+ittyButtons[2].onclick = c3
+ittyButtons[3].onclick = c4
+ittyButtons[4].onclick = c5
 
 function c1() {
   c.innerText = "c1"
@@ -55,6 +55,7 @@ function c4() {
 function c5() {
   c.innerText = "c5"
 }
+
 
 
 /*
