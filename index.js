@@ -1,6 +1,7 @@
 alert("YO")
 userName = prompt("What's your name?")
-alert(`Nice ot meet you ${userName}`)
+alert((userName == "Adam") ? `Nice ot meet you ${userName}` : `Never heard of you ${userName}`)
+
 
 
 /*
