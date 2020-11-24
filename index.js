@@ -30,6 +30,11 @@ console.log(thangs)
 const ittyButtons = document.querySelectorAll(".iterableButton")
 const c = document.querySelector(".changling")  
 
+let c5 = function() {
+  return c.innerText = "Remember blaahh"
+} // this function will work because it appears before ittyButtons[4] 
+
+
 ittyButtons[0].onclick = c1
 ittyButtons[1].onclick = c2
 ittyButtons[2].onclick = c3
@@ -52,9 +57,17 @@ function c4() {
   c.innerText = "c4"
 }
 
-function c5() {
-  c.innerText = "c5"
-}
+// function c5() {
+//   c.innerText = "REMEMBER! Function Declarations are hoisted \n while Function Expressions are not"
+// }
+
+
+//  function c5 above is equivalent to below... but, below won't work because it isn't hoisted above the the part where it's called... 
+// let c5 = function() {
+//   return c.innerText = "Remember blaahh"
+// }
+
+
 
 
 
