@@ -31,3 +31,20 @@ someThang.weirdness3()
 
 console.log(Object.keys(someThang), Object.values(someThang))
 
+// setting up Object with "Class" type of vibe
+
+function Warrior(armor, weapon, allegiance, enemy = "") {
+  this.armor = armor;
+  this.weapon = weapon;
+  this.allegiance = allegiance;
+  this.enemy = enemy
+}
+
+const fferfl = new Warrior("chainmail", "short sword", "elves")
+console.log({fferfl})
+
+const dwarg = new Warrior("plate", "spiked mace", "orcs")
+console.log({dwarg})
+
+dwarg.enemy = fferfl
+console.log(dwarg.enemy.armor)
