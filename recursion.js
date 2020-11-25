@@ -26,7 +26,12 @@ function guesser() {
   }
 };
 
+//commented out to avoid auto run
 
-(function(){
-  guesser()  
-})()
+// (function(){
+//  guesser()  
+// })() // the invocation can take an argument ... example below
+
+// (function(name){
+//   console.log("HI ", name)  
+// })("Adam")
