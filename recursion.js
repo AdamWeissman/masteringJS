@@ -6,9 +6,9 @@ randomGuess = (Math.floor(Math.random() * 10)) + 1
 theGuess.innerText = "click me to begin"
 
 
-// theGuess.onclick = guesser
+//theGuess.onclick = guesser
 
-(function guesser() {
+function guesser() {
   //e.preventDefault()
   userGuess = prompt("Guess!")
   if (userGuess > randomGuess) {
@@ -24,4 +24,9 @@ theGuess.innerText = "click me to begin"
   } else if (userGuess == randomGuess) {
     theGuess.innerText = randomGuess + ", you got it!"
   }
+};
+
+
+(function(){
+  guesser()  
 })()
