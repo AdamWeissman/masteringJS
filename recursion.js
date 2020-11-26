@@ -12,7 +12,7 @@ function guesser() {
   //e.preventDefault()
   userGuess = prompt("Guess!")
   if (userGuess > randomGuess) {
-    theGuess.innerText = "LOWER!"
+    theGuess.innerHTML = "LOWER!"
     setTimeout(function() {
       guesser()
     }, 2000)
@@ -35,3 +35,13 @@ function guesser() {
 // (function(name){
 //   console.log("HI ", name)  
 // })("Adam")
+
+/*
+const links = document.querySelectorAll('a')
+links.forEach(function(el){
+  console.log(el.getAttribute('href));
+  el.setAttribute('href', "www.huh.com")
+})
+
+
+*/
