@@ -36,6 +36,9 @@ document.body.appendChild(div)
 const h1 = document.querySelector("h1");
 document.body.insertBefore(div, h1)
 
+... also keep in mind
+const textWithoutAHome = createTextNode("Append me somewhere!!!")
+someElement.appendChild(textWithoutAHome)
 
 */
 
