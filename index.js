@@ -41,6 +41,7 @@ ittyButtons[2].onclick = c3
 ittyButtons[3].onclick = c4
 ittyButtons[4].onclick = c5
 
+
 function c1() {
   c.innerText = "c1"
 }
