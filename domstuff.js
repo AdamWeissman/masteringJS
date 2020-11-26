@@ -1,3 +1,4 @@
+// BASIC DOM STUFF
 // console.dir(document) to get a listing of what's on a page...
 
 document.querySelector("h1").style.backgroundColor = "red"
