@@ -37,3 +37,25 @@ document.querySelector('#thang').style.backgroundColor = "green"
 
 // .setAttribute('class', 'someClass')
 // .remove() takessomething away
+
+/*
+const links = document.querySelectorAll('a')
+links.forEach(function(el){
+  console.log(el.getAttribute('href'));
+  el.setAttribute('href', "www.huh.com")
+})
+
+
+
+
+
+USEFUL CLASSLIST METHODS...
+.classList.add('addAClassName')
+.classList.toggle('adds if it isn't there, takes it a way if it is')
+.classList.remove('put the name of the class here')
+.classList.replace('current class', 'new class')
+
+
+
+*/
+

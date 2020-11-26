@@ -36,12 +36,3 @@ function guesser() {
 //   console.log("HI ", name)  
 // })("Adam")
 
-/*
-const links = document.querySelectorAll('a')
-links.forEach(function(el){
-  console.log(el.getAttribute('href));
-  el.setAttribute('href', "www.huh.com")
-})
-
-
-*/
