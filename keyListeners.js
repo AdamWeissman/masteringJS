@@ -13,10 +13,10 @@ document.addEventListener("keyup", pressKeyOff)
 
 function pressKeyOn(event){
   //console.dir(event.key) show the key that's being pressed
-  keys[event.key] = true
+  console.log(keys[event.key] = true)
 }
 
 function pressKeyOff(event){
   //console.dir(event.key)
-  keys[event.key] = true
+  console.log(keys[event.key] = false)
 }
