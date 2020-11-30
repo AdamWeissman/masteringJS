@@ -27,6 +27,7 @@ function message2() {
 const thangs = document.querySelectorAll("thang")
 console.log(thangs)
 
+
 const ittyButtons = document.querySelectorAll(".iterableButton")
 const c = document.querySelector(".changling")  
 
