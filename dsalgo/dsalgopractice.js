@@ -99,7 +99,7 @@ console.log("string compare", compareStrings(strang, strang2))
 // OPTIMIZED COMPARE STRINGS
 
 const string1 = "eabz###"
-const string2 = "eaz#z##"
+const string2 = "eaz#h##"
 
 var backspaceCompare = function(S, T) {
     let p1 = S.length - 1, p2 = T.length - 1;
@@ -145,3 +145,42 @@ var backspaceCompare = function(S, T) {
 };
 
 console.log("optimized", backspaceCompare(string1, string2));
+
+/* 
+
+  some general notes from studying...
+  2 Pointers Precedes Sliding Window ... sliding window used on Strings, Arrays, and Linkedlists
+  Start with Test Cases
+
+
+*/
+
+// Longest Substring without Repetitions
+
+const striiing = "abccabb"
+
+const lengthOfLongestSubstring = function(s) {
+    if(s.length <= 1) return s.length;
+    
+    const seen = {};
+    let left = 0, longest = 0;
+    
+    for(let right = 0; right < s.length; right++) {
+        const currentChar = s[right];
+        const previouslySeenCharValue = seen[currentChar];
+        // and by value I mean index!
+        console.log("this is the previously seen character value", previouslySeenCharValue)
+        
+        if(previouslySeenCharValue >= left) {
+          left = previouslySeenCharValue + 1;
+        }
+        
+        seen[currentChar] = right;
+        
+        longest = Math.max(longest, right - left + 1);
+    }
+    
+    return longest;
+};
+
+console.log("longest substring", lengthOfLongestSubstring(striiing));
