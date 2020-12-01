@@ -64,18 +64,34 @@ console.log("two num sum recursive solution without sort", recursiveTwoNum(550, 
 // string problem below...
 
 let strang = "abe#c#" 
+let strang2 = "abc#" 
 
-function stringChecker(str1) {
-  const comparer = {}
-
-  for (let p = str1.length - 1; p > -1; p--) {
-    if (str1[p] == "#") {
-      p -= 1; 
+const buildString = function(string) {
+  const builtArray = [];
+  for (let p = 0; p < string.length; p++) {
+    if (string[p] !== "#") {
+      builtArray.push(string[p])
     } else {
-      comparer[p] = str1[p]
+      builtArray.pop()
     }
   }
-  console.log("comparer value", comparer)
+  return builtArray; 
 }
 
-console.log("string checker", stringChecker(strang))
+const compareStrings = function(s,t){
+  const finalS = buildString(s);
+  const finalT = buildString(t);
+
+  if (finalS.length !== finalT.length) {
+    return false
+  } else {
+    for (let p = 0; p < finalS.length; p++) {
+      if (finalS[p] !== finalT[p]) {
+        return false
+      }
+    }
+  }
+  return true;
+}
+
+console.log("string compare", compareStrings(strang, strang2))
