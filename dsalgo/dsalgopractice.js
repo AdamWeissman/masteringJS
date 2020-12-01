@@ -60,3 +60,22 @@ function recursiveTwoNum(t, a, i) {
 }
 
 console.log("two num sum recursive solution without sort", recursiveTwoNum(550, nums, 0))
+
+// string problem below...
+
+let strang = "abe#c#" 
+
+function stringChecker(str1) {
+  const comparer = {}
+
+  for (let p = str1.length - 1; p > -1; p--) {
+    if (str1[p] == "#") {
+      p -= 1; 
+    } else {
+      comparer[p] = str1[p]
+    }
+  }
+  console.log("comparer value", comparer)
+}
+
+console.log("string checker", stringChecker(strang))
