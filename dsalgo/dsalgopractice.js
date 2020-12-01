@@ -42,3 +42,21 @@ function trappingRainWater(heights) {
     */
 
    console.log("trapping rainwater result", trappingRainWater(waterTable))
+
+
+   // also... here's a recursive two num sum
+
+const nums = [1,6,2,9,20,50,100,500]
+
+function recursiveTwoNum(t, a, i) {
+  let targetNum = t - a[i]
+  if (a.indexOf(targetNum) != -1 ) {
+    return [a[i], a[a.indexOf(targetNum)]]
+  } else if (a.indexOf(targetNum) == -1 && i == a.length - 1 ) {
+    return ["no match"]
+  } else {
+    return recursiveTwoNum(t, nums, i+= 1)
+  } 
+}
+
+console.log("two num sum recursive solution without sort", recursiveTwoNum(550, nums, 0))
