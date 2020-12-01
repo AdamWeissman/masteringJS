@@ -3,19 +3,19 @@ console.log("hello from dsalgopractice")
 
 const waterTable = [0,1,0,2,1,0,3,1,0,1,2]
 
-function trappingRainWater(heights {
+function trappingRainWater(heights) {
   let left = 0,
     right = heights.length - 1,
     total = 0,
     maxLeft = 0,
-    maxRight = 0;
+    maxRight = 0
 
     while (left < right) {
       if(heights[left] <= heights[right]) {
         if (heights[left] >= maxLeft) {
           maxLeft = heights[left]
         } else {
-          total += maxLeft - heights[left]
+          total += maxLeft - heights[left];
         }
         left++;
       } else {
@@ -26,14 +26,10 @@ function trappingRainWater(heights {
         }
           right--;
         }
-        return total;
       }
+      return total
     }
 
-
-
-
-  }
     /*
       1) Identify a pointer with the lesser value
       2) Is this pointer value greater than or equal to max on the same side
@@ -44,3 +40,5 @@ function trappingRainWater(heights {
 
 
     */
+
+   console.log("trapping rainwater result", trappingRainWater(waterTable))
