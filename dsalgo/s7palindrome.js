@@ -8,8 +8,20 @@ console.log("RUNNING PALINDROME")
   Main Problem in Context of Input:
     -Edge Cases
   Sub Problems in Terms of Intermediary Steps:
+    -When to Enter a Loop and With What
+    -When to Exit a Loop and With What
     -Things to Keep Track Of
     -Inputs and Outputs
   Final Output:
 
 */
+
+
+const testStringEven = "deed"; testStringOdd = "abcba"
+
+const getMedian = (word) => {
+  return (word.length % 2 == 0) ? "even" : "odd" // if return is not included this declaration returns undefined
+}
+
+
+console.log("Even", getMedian(testStringEven), "Odd", getMedian(testStringOdd))
