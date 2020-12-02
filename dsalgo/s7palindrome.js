@@ -23,19 +23,25 @@ const getEvenOrOdd = (word) => {
   return (word.length % 2 == 0) ? "even" : "odd" // if return is not included this declaration returns undefined
 }
 
-const getMedian = (word) => {
+const getMedianIndexes = (word) => {
   if (getEvenOrOdd(word) == 'even') {
       evens = [],
       num = word.length / 2
-      evens.push(num, num + 1)
+      evens.push(num - 1, num) // -1 for index
       return evens
   } else {
       odd = []
-      num = (word.length / 2) + 1
+      num = (word.length - 1) / 2 // -1 for index
       odd.push(num)
       return odd
   }
 }
 
+function slidingWindowPalindrome(word) {
+  let medianIndex = getMedianIndexes(word)
+  console.log(medianIndex)
 
-console.log("Even", getMedian(testStringEven), "Odd", getMedian(testStringOdd))
+}
+
+
+console.log("Even", getMedianIndexes("bb"), "Odd", getMedianIndexes("a"))
