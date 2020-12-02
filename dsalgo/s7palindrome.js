@@ -23,7 +23,7 @@ const getEvenOrOdd = (word) => {
   return (word.length % 2 == 0) ? "even" : "odd" // if return is not included this declaration returns undefined
 }
 
-const getMedian = (word) {
+const getMedian = (word) => {
   if (getEvenOrOdd(word) == 'even') {
       evens = [],
       num = word.length / 2
