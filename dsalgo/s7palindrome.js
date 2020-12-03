@@ -65,3 +65,16 @@ function twoPointerExpandingPalindrome(thang) {
 
 //console.log("Even", getMedianIndexes("bb"), "Odd", getMedianIndexes("a"))
 console.log(twoPointerExpandingPalindrome("A man, a plan, a canal: Panama"))
+
+
+
+console.log(Math.floor(6 / 2))
+// ugh ... could've used Math.floor for indexing instead of odds and evens custom method
+// initialize left/right pointers to point at the middle index of the string. Remember, indexes start at 0 meaning that we have to floor() the value from dividing length by 2 in order to get the index of the center.
+//  let left = Math.floor(s.length / 2), right = left;
+    
+
+// if the string is even, move left pointer back by 1 so left/right are pointing at the 2 middle values respectively.
+// if(s.length % 2 === 0) {
+//   left--;
+//  }
