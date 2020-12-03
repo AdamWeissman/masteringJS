@@ -41,12 +41,20 @@ function slidingWindowPalindrome(word) {
   let medianIndex = getMedianIndexes(word)
   console.log(medianIndex)
   let leftIdx = medianIndex[0],
-    rightIdx = medianIndex[1] || medianIndex[0]
+    rightIdx = medianIndex[1] || medianIndex[0];
 
   console.log(word[leftIdx], word[rightIdx])
-
+  while (rightIdx < word.length) {
+    if (word[leftIdx] != word[rightIdx]) {
+      return false
+    } else {
+      leftIdx--;
+      rightIdx++;
+    }
+  }
+  return true
 }
 
 
 console.log("Even", getMedianIndexes("bb"), "Odd", getMedianIndexes("a"))
-console.log(slidingWindowPalindrome("alpap"))
+console.log(slidingWindowPalindrome("fouuof"))
