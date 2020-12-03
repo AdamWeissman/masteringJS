@@ -37,7 +37,7 @@ const getMedianIndexes = (word) => {
   }
 }
 
-function slidingWindowPalindrome(word) {
+function twoPointerExpandingPalindrome(word) {
   let medianIndex = getMedianIndexes(word)
   console.log(medianIndex)
   let leftIdx = medianIndex[0],
@@ -57,4 +57,4 @@ function slidingWindowPalindrome(word) {
 
 
 console.log("Even", getMedianIndexes("bb"), "Odd", getMedianIndexes("a"))
-console.log(slidingWindowPalindrome("fouuof"))
+console.log(twoPointerExpandingPalindrome("fouuof"))
