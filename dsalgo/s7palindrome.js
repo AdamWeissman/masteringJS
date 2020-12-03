@@ -37,7 +37,13 @@ const getMedianIndexes = (word) => {
   }
 }
 
-function twoPointerExpandingPalindrome(word) {
+function cleanUp(x) {
+  return x.replace(/[^A-Za-z0-9]/g,"").toLowerCase();
+}
+
+
+function twoPointerExpandingPalindrome(thang) {
+  const word = cleanUp(thang)
   let medianIndex = getMedianIndexes(word)
   console.log(medianIndex)
   let leftIdx = medianIndex[0],
@@ -52,9 +58,10 @@ function twoPointerExpandingPalindrome(word) {
       rightIdx++;
     }
   }
+
   return true
 }
 
 
-console.log("Even", getMedianIndexes("bb"), "Odd", getMedianIndexes("a"))
-console.log(twoPointerExpandingPalindrome("fouuof"))
+//console.log("Even", getMedianIndexes("bb"), "Odd", getMedianIndexes("a"))
+console.log(twoPointerExpandingPalindrome("A man, a plan, a canal: Panama"))
