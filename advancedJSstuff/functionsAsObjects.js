@@ -1,3 +1,9 @@
-const interesting =  new Function('str', 'console.log(`hello ${str}`)')
+const interesting =  new Function('str', 'console.log(str)')
 
-interesting("adam")
+interesting("Adam")
+
+function hello(x){
+  console.log(`hi ${x}`)
+}
+
+hello("dave")
