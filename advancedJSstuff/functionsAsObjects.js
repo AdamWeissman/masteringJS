@@ -1,9 +1,8 @@
-const interesting =  new Function('str', 'console.log(str)')
+const interesting =  new Function('str', 'return str("Adam")')
 
-interesting("Adam")
+const z = interesting(hello)
 
 function hello(x){
   console.log(`hi ${x}`)
 }
 
-hello("dave")
