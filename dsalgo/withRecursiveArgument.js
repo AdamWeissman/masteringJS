@@ -21,3 +21,23 @@ const testing = ["alpha", "beta", "cappa", "delta"]
 const x = recursivelyAddedVariable(testing)
 console.log(x)
 console.log("this is the value that was altered on the else", theValue)
+
+//NOTE: Below is not recursive but just dumped here for testing.
+
+
+someArray = [13,14,15,16,17,18]
+
+function chunk(array, n) {
+  let chunkedArrays = []
+  let tempArray = []
+  for (let rightSliderClamp = 0; rightSliderClamp <= array.length; rightSliderClamp++){ // <= array.length to capture last element
+    if (tempArray.length == n || rightSliderClamp == array.length ) {
+      chunkedArrays.push([...tempArray]) // NEED to use slice, otherwise it returns latest value of tempArray for everything
+      tempArray.length = 0
+    }
+    tempArray.push(array[rightSliderClamp])
+  }
+  return chunkedArrays
+}
+
+console.log(chunk(someArray, 5))
