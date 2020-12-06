@@ -1,0 +1,3 @@
+function letAdamLogin(){
+  let array []
+}
