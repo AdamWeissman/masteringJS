@@ -1,13 +1,32 @@
-// function letAdamLogin() {
-//   let array = []
-//   for (let i = 0; i < 1000000; i++) {
-//     array.push(i)
-//   }
-//   return 'Access Granted!'
-// }
+const giveAccessTo = (name) => 
+  'Access Granted to ' + name //don't need brackets because it's an arrow function
 
-// console.log(letAdamLogin())
+function authenticate(verifyTime) {
+  let array = []
+  for (let i = 0; i < verifyTime; i++) {
+    array.push(i)
+  }
+  return giveAccessTo(person.name)
+}
 
-//console.log("hello from higher order functions")
+function sing(person) {
+  return 'lalalal my name is '+ person.name;
+}
 
-// nothing special about this lesson so far... just function calling another function
+
+function letPerson(person, someFn) {
+  if (person.level === 'admin') {
+    //someFn(5000000) this code used with authenticate...
+    // but could also be used with "sing function" or whatever
+    return someFn(person)
+  } else if (person.level === 'user') {
+    //someFn(100000)
+    return someFn(person) //this would call sing if sing is passed
+  }
+  
+}
+
+// console.log(letPerson({level: 'admin', name:'Sally'}, authenticate ))
+console.log(letPerson({level: 'admin', name:'Sally'}, sing ))
+
+// this is a decent portrait of higher order functions
