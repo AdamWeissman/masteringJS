@@ -46,7 +46,7 @@ function steps(n) {
     */
 
     function numOfSpacesAndHashtags(level) { // this is within the scope of n
-      const howManySpaces = n - level - 1,
+      const howManySpaces = n - 1,
         howManyHashtags = level + 1 //adding one to deal with indexing issues here
 
       const spacesPortion = new Array(howManySpaces).fill(' ').join(''),
