@@ -33,18 +33,33 @@
 
 
 function steps(n) {
-    numOfSpaces = 1
-    totalSteps = new Array(n).fill('#')
-    for (let level = 1; level < totalSteps.length; level++) {
-      levelArray = [].concat(totalSteps[level - 1])
-      console.log(levelArray)  
+    /* 
+                      DONE with iteration track the level (row)
+    track the column
+    track number of #s
+    track number of ' 's
+                      PROVEN  a call to a function that will deduct "the level from n" to return the number of spaces
+                      PROVEN  if n is 5, then...
+                      PROVEN  level 1: 1 #s and 4 spaces (n - level returns the number of spaces)
+                      PROVEN  level 2: 2 #s and 3 spaces (n - level return number of spaces)
+    call to a function that adds a hash for each ... this can actually be combined into one
+    */
+
+    function numOfSpacesAndHashtags(level) { // this is within the scope of n
+      const howManySpaces = n - level - 1,
+        howManyHashtags = level + 1 //adding one to deal with indexing issues here
+
+      const spacesPortion = new Array(howManySpaces).fill('').join(''),
+        hashTagsPortion = new Array(howManyHashtags).fill('#').join('')
+
+        return hashTagsPortion.concat(spacesPortion)
     }
-  
+
+    for (let level = 0; level < n; level++) {
+      console.log(numOfSpacesAndHashtags(level))
+    }
 
 
 }
-
-
-
 
 module.exports = steps;
