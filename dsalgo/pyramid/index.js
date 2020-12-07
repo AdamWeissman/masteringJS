@@ -14,11 +14,11 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {
-  
-    /*
+
+
+  /*
     
-    
+    M Y    T E S T    C A S E    E X A M P L E S
    
       EXAMPLE ONE:
         ONE LEVEL has 1#, no spaces -- spaces is equivalent to number of levels - 1
@@ -37,6 +37,9 @@ function pyramid(n) {
 
     */
 
+
+function pyramid(n) {
+  
     const numOfHashtagsOnLevel = function(nLevel) {
       let finalNum = -1
       for (let i = 0; i < nLevel; i++) {
@@ -44,9 +47,7 @@ function pyramid(n) {
       }
       return finalNum
     }
-  
-    //let totalCharsFinalLevel = numOfHashtagsOnlLevel(n) // will need this to increment/decrement
-  
+    
     function levelAssembler(spaces, hashtags) {
       const halfOfTheSpaces = new Array(spaces).fill(' ').join(''),
         hashTagsPortion = new Array(hashtags).fill('#').join('')
@@ -54,12 +55,14 @@ function pyramid(n) {
         return halfOfTheSpaces.concat(hashTagsPortion.concat(halfOfTheSpaces))
     }
 
-    for (let index = 1; index <= n; index++) {
+    for (let index = 1; index <= n; index++) { // index <= n to get the final value
       let numOfSpaces = n - index
       let numOfHashtags = numOfHashtagsOnLevel(index)
       console.log(levelAssembler(numOfSpaces, numOfHashtags))
     } 
+  }
 
-}
+
+
 
 module.exports = pyramid;
