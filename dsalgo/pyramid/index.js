@@ -24,14 +24,19 @@ function pyramid(n) {
       In other words... A FORMULA that determines how many occupied spaces on any given level
       
       EXAMPLE ONE:
-        ONE LEVEL has 1#, no spaces
+        ONE LEVEL has 1#, no spaces -- spaces is equivalent to number of levels - 1
 
       EXAMPLE TWO:
-        ONE LEVEL #1, leftSpace 4, RightSpace 4
-        TWO LEVEL #3, leftSpace 3, RightSpace 3
-        THREE LEVEL #5, leftSpace: 2 RightSpace 2 
-        FOUR LEVEL #7, leftSpace: 1 RightSpace 1
-        FIVE LEVEL: #:9 leftSpace: 0  RightSpace 0
+        ONE LEVEL #1, leftSpace 4, RightSpace 4 -- spaces is equivalent to number of levels - 1
+        TWO LEVEL #3, leftSpace 3, RightSpace 3 -- spaces is equivalent to number of levels - 2
+        THREE LEVEL #5, leftSpace: 2 RightSpace 2  -- spaces is equivalent to number of levels - 3
+        FOUR LEVEL #7, leftSpace: 1 RightSpace 1 -- spaces is equivalent to number of levels - 4
+        FIVE LEVEL: #:9 leftSpace: 0  RightSpace 0 -- spaces is equivalent to number of levels - 5
+
+      EXAMPLE THREE:
+        ONE LEVEL - #1, leftSpace 2, RightSpace 2 -- spaces is equivalent to number of levels - 1
+        TWO LEVEL - #3, leftSpace 1, RightSpace 1 -- spaces is equivalent to number of levels - 2
+        THREE LEVEL - #5, leftSpace: 0 RightSpace 0  -- spaces is equivalent to number of levels - 3
 
     */
 
