@@ -47,7 +47,7 @@ function pyramid(n) {
       
     */
 
-    function numOfCharactersOnFinalLevel(nLevel) {
+    const numOfCharactersOnFinalLevel = function(nLevel) {
       let finalNum = -1
       for (let i = 0; i < nLevel; i++) {
         finalNum += 2
@@ -58,6 +58,6 @@ function pyramid(n) {
     return numOfCharactersOnFinalLevel(n)
 }
 
-console.log(pyramid(2))
+console.log("5 levels", pyramid(5))
 
 module.exports = pyramid;
