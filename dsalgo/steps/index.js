@@ -49,7 +49,7 @@ function steps(n) {
       const howManySpaces = n - level - 1,
         howManyHashtags = level + 1 //adding one to deal with indexing issues here
 
-      const spacesPortion = new Array(howManySpaces).fill('').join(''),
+      const spacesPortion = new Array(howManySpaces).fill(' ').join(''),
         hashTagsPortion = new Array(howManyHashtags).fill('#').join('')
 
         return hashTagsPortion.concat(spacesPortion)
@@ -58,8 +58,6 @@ function steps(n) {
     for (let level = 0; level < n; level++) {
       console.log(numOfSpacesAndHashtags(level))
     }
-
-
 }
 
 module.exports = steps;
