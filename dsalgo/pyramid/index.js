@@ -19,10 +19,7 @@ function pyramid(n) {
     /*
     
     
-    CALL a function to calculate:
-      how many hashtags, how many spaces, and how many spaces on left or right
-      In other words... A FORMULA that determines how many occupied spaces on any given level
-      
+   
       EXAMPLE ONE:
         ONE LEVEL has 1#, no spaces -- spaces is equivalent to number of levels - 1
 
@@ -40,7 +37,7 @@ function pyramid(n) {
 
     */
 
-    const numOfCharactersOnFinalLevel = function(nLevel) {
+    const numOfHashtagsOnLevel = function(nLevel) {
       let finalNum = -1
       for (let i = 0; i < nLevel; i++) {
         finalNum += 2
@@ -48,14 +45,21 @@ function pyramid(n) {
       return finalNum
     }
   
+    //let totalCharsFinalLevel = numOfHashtagsOnlLevel(n) // will need this to increment/decrement
+  
     function levelAssembler(spaces, hashtags) {
-      const halfOfTheSpaces = new Array(spaces / 2).fill(' ').join(''),
-        hashTagsPortion = new Array(howManyHashtags).fill('#').join('')
+      const halfOfTheSpaces = new Array(spaces).fill(' ').join(''),
+        hashTagsPortion = new Array(hashtags).fill('#').join('')
+
         return halfOfTheSpaces.concat(hashTagsPortion.concat(halfOfTheSpaces))
     }
 
-}
+    for (let index = 1; index <= n; index++) {
+      let numOfSpaces = n - index
+      let numOfHashtags = numOfHashtagsOnLevel(index)
+      console.log(levelAssembler(numOfSpaces, numOfHashtags))
+    } 
 
-console.log("5 levels", pyramid(5))
+}
 
 module.exports = pyramid;
