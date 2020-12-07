@@ -51,7 +51,7 @@ function pyramid(n) {
     function levelAssembler(spaces, hashtags) {
       const halfOfTheSpaces = new Array(spaces).fill(' ').join(''),
         hashTagsPortion = new Array(hashtags).fill('#').join('')
-
+        
         return halfOfTheSpaces.concat(hashTagsPortion.concat(halfOfTheSpaces))
     }
 
