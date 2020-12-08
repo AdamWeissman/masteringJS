@@ -15,9 +15,25 @@
 //     [11, 16, 15, 6],
 //     [10,  9,  8, 7]]
 
+
+/*
+
+  You start with "N" and that will transform into a spiral matrix
+  ASSIGN the number of elements in the array by squaring N 
+
+
+*/
+
+
 function matrix(n) {
+
+  const theArray = new Array(n * n)
+  return theArray 
 
 
 }
+
+console.log(matrix(2))
+
 
 module.exports = matrix;
