@@ -20,15 +20,17 @@ function fib(n) {
   let starterArray = [0,1],
     leftIdx = 0
 
-  for (let i = 1; i <= n; i++) {
-    console.log(i)
+  for (let rightIdx = 1; rightIdx < n; rightIdx++) {
+    const appendMe = starterArray[leftIdx] + starterArray[rightIdx]
+    starterArray.push(appendMe)
+    leftIdx = rightIdx
   }
 
-
+  return starterArray[starterArray.length - 1]
 
 }
 
 
-fib(5)
+//console.log(fib(5))
 
 module.exports = fib;
