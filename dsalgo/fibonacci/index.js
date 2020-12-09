@@ -34,6 +34,21 @@ function fibIterative(n) {
 }
 
 
+// function memoize(fn) {
+//   const cache = {};
+//   return function(...args) {
+//     if (cache[args]) {
+//       return cache[args];
+//     }
+
+//     const result = fn.apply(this, args);
+//     cache[args] = result
+
+//     return result
+//   }
+ 
+// }
+
 
 
   function fibRecursive(n, leftVal = 0, rightVal = 1, counter = 1) {
@@ -45,6 +60,9 @@ function fibIterative(n) {
 // THIS LINE ALIGNS ARGS  N,  NEW LEFTVAL,  NEW RIGHTVAL, NEW COUNTER
     }
   } 
+ 
+  // const fib = memoize(fibRecursive)
+
 
 
 // console.log(fib(5))
