@@ -40,8 +40,8 @@ function fibIterative(n) {
     if (n == counter) {
       return rightVal
     } else {
-      let newVal = leftVal + rightVal,
-      return fib(n, rightVal, newVal, counter++)
+      let newVal = leftVal + rightVal
+      return fib(n, rightVal, newVal, counter+= 1)
     }
     
   } 
