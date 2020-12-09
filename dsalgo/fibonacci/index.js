@@ -36,17 +36,17 @@ function fibIterative(n) {
 
 
 
-  function fib(n, leftVal = 0, rightVal = 1, counter = 1) {
+  function fibRecursive(n, leftVal = 0, rightVal = 1, counter = 1) {
     if (n == counter) {
       return rightVal
     } else {
       let newVal = leftVal + rightVal
-      return fib(n, rightVal, newVal, counter+= 1)
+      return fibRecursive(n, rightVal, newVal, counter+= 1)
     }
     
   } 
 
 
-console.log(fib(5))
+// console.log(fib(5))
 
-module.exports = fib;
+module.exports = fibRecursive;
