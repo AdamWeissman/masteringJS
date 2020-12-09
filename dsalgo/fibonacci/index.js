@@ -40,10 +40,10 @@ function fibIterative(n) {
     if (n == counter) {
       return rightVal
     } else {
-      let newVal = leftVal + rightVal
-      return fibRecursive(n, rightVal, newVal, counter+= 1)
+      //let newVal = leftVal + rightVal
+      return fibRecursive(n, rightVal, leftVal + rightVal, counter+= 1)
+// THIS LINE ALIGNS ARGS  N,  NEW LEFTVAL,  NEW RIGHTVAL, NEW COUNTER
     }
-    
   } 
 
 
