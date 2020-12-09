@@ -20,6 +20,8 @@ function fib(n) {
   let starterArray = [0,1],
     leftIdx = 0
 
+  // NOTE: leftIdx and rightIdx starting values in starterArray correspond EXACTLY with intiialize values for iteration!!
+
   for (let rightIdx = 1; rightIdx < n; rightIdx++) {
     const appendMe = starterArray[leftIdx] + starterArray[rightIdx]
     starterArray.push(appendMe)
