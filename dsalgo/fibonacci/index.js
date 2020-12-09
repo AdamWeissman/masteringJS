@@ -8,7 +8,7 @@
 // Example:
 //   fib(4) === 3
 
-function fib(n) {
+function fibIterative(n) {
   // Set Starter Array at [0,1]
   // INCREMENT an iterator towards N
   // Assign Left Index at 0 and treat Right Index as iterator at location 1 
@@ -31,10 +31,22 @@ function fib(n) {
   }
 
   return starterArray[starterArray.length - 1]
-
 }
 
 
-//console.log(fib(5))
+
+
+  function fib(n, leftVal = 0, rightVal = 1, counter = 1) {
+    if (n == counter) {
+      return rightVal
+    } else {
+      let newVal = leftVal + rightVal,
+      return fib(n, rightVal, newVal, counter++)
+    }
+    
+  } 
+
+
+console.log(fib(5))
 
 module.exports = fib;
