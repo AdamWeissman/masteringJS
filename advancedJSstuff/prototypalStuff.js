@@ -23,3 +23,14 @@ let lizard = {
 const singLizard = dragon.sing.bind(lizard)
 
 console.log(singLizard())
+
+// never use something.__proto__ = someThingElse
+// how to create your own prototypal inheritance
+
+let human = {
+  mortal: true
+}
+
+let socrates = Object.create(human)
+socrates.age = 45
+console.log(human.isPrototypeOf(socrates))
