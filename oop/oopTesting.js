@@ -43,8 +43,6 @@ function Orc(name, weapon) {
   this.weapon = weapon;
 }
 
-const potar = new Orc('Potar', 'fire')
-console.log(potar.name)
 
 const Orc1 = new Function('name', 'weapon',
   `this.name = name;
@@ -56,5 +54,12 @@ const sarlag = new Orc1('Sarlag', 'fireworks')
 
 console.log(sarlag)
 
+Orc.prototype.attack = function() {
+  return 'attack with ' + this.weapon
+}
+
+const potar = new Orc('Potar', 'fire')
+console.log(potar.name)
+console.log(potar.attack())
 
 
