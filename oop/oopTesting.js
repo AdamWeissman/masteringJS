@@ -54,7 +54,8 @@ const sarlag = new Orc1('Sarlag', 'fireworks')
 
 console.log(sarlag)
 
-Orc.prototype.attack = function() {
+Orc.prototype.attack = function() { // remember this wont work if an arrow function... arrow functions are lexically scoped
+
   return 'attack with ' + this.weapon
 }
 
@@ -62,4 +63,5 @@ const potar = new Orc('Potar', 'fire')
 console.log(potar.name)
 console.log(potar.attack())
 
-
+// REMEMBER ... ARROW FUNCTION IS LEXICALLY SCOPED
+//          WHEREAS function () is dynamically scoped.
