@@ -26,3 +26,15 @@ function b(num) {
 // referential transparency in action below
 console.log(b(a(3, 4)))
 console.log(b(7))
+
+// goal of pure functions isn't necessarily 100% but you want to isolate side effects so your code is more predictable
+
+
+
+// IDEMPOTENCE BELOW
+
+function notGood(num) {
+  return Math.random(num)
+}
+
+console.log(notGood(5))
