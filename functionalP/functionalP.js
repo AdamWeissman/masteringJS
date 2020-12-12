@@ -38,3 +38,7 @@ function notGood(num) {
 }
 
 console.log(notGood(5))
+
+// actual idempotence... a function called within itself returns the same result
+
+console.log(Math.abs(Math.abs(-50)))
