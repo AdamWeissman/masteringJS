@@ -42,7 +42,7 @@ function purchaseItem(...fns) {
 }
 
 function addItemToCart(user, item) {
-  cartHistory.push(user)
+  cartHistory.push(user) // add this to every function
   const updateCart = user.cart.concat([item])
   return Object.assign( {}, user, {cart: updateCart })
 }
