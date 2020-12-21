@@ -1,7 +1,18 @@
 <form action="/someUrl">
-  <input type="text">
-  <input type="password">
+  <label for="username">ENTER A USER NAME: </label>
+  <input id="username" type="text" placeholder="username" name="thisNameIsTheAttributeThatIsSubmittedWithTheInput">
+
+  <label for="password"></label>
+  <input id="password" type="password" placeholder="enter your password">
   <input type="color">
   <input type="number">
   <input type="date">
+
+  <button>IF THIS IS IN A FORM IT WILL AUTOMATICALLY SUBMIT </button>
+  <button type="buttom">IF TYPE IS A BUTTON, THEN IT IS JUST A BUTTON</button>
+  <input type="submit" value="if no value is set it just says submit">
 </form>
+
+  <button>OUTSIDE OF FORM DOES NOTHING</button>
+
+<!-- labels super useful for checkboxes and radials  -->
