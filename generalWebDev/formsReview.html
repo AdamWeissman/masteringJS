@@ -15,4 +15,22 @@
 
   <button>OUTSIDE OF FORM DOES NOTHING</button>
 
-<!-- labels super useful for checkboxes and radials  -->
+<!-- SPECIAL SEARCHES BELOW  -->
+
+<form action="https://www.google.com/search">
+  <input type="text" name="q">
+  <button>SEARCH GOOGLE</button>
+</form>
+
+<form action="https://www.youtube.com/results">
+  <input type="text" name="search_query">
+  <button>SEARCH YOUTUBE</button>
+</form>
+
+<!-- Same name guarantees a single selection -->
+<input type="radio" name="size" id="xs" value="xs">
+<input type="radio" name="size" id="m" value="m">
+<input type="radio" name="size" id="l" value="l">
+
+
+<!-- Can include validation requirements from the front end in forms with HTML5, regEx patterns etc -->
