@@ -1,3 +1,11 @@
 h1 {
-  color: red
+  color: red;
+  text-decoration: underline wavy;
+  text-align: center;
+  font-family: fantasy;
+}
+
+button {
+  color: magenta;
+  background-color: cyan;
 }
