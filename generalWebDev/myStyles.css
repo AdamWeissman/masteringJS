@@ -9,3 +9,96 @@ button {
   color: magenta;
   background-color: cyan;
 }
+
+/* 
+GENERAL CSS NOTES
+
+THE GENERAL SELECTOR FORMAT
+selector {
+  property: value
+} 
+
+UNIVERSAL SELECTOR
+ * {
+   color: black
+ }
+
+ELEMENT SELECTOR - SELECT BY TYPE
+h1 {
+  color: magenta;
+}
+
+can also do the following for multiple elements...
+h1, h2, h3 {
+  color: magenta;
+}
+
+THE ID SELECTOR, with #
+#someID {
+  color: green
+}
+
+THE CLASS SELECTOR, with a .
+.someClass {
+  color: green
+
+THE DESCENDANT SELECTOR using a space to go deeper... can do multiple levels
+.someClass someElement {
+  color: blue 
+}
+
+someElement someOtherElement someOtherElement {
+  color: red
+}
+
+ADJACENT SELECTOR someElement + someElement ... changes whatever comes right 
+input + button {
+  background-color: green
+}  
+
+DIRECT CHILD someElement > someElement
+footer > a {
+  color: blue
+} might use something like this to grab the last element after a list of other stuff if it's a direct descendant under some nested list... (or something like that)
+
+ATTRIBUTE SELECTOR example below
+input[type="text"] {
+  width: 300px;
+  color: yellow
+}
+
+input[type="password"] {
+  width: 300px;
+  color: yellow
+}
+
+div[class="myClass"] {
+  width: 300px;
+  color: yellow
+}
+
+... for attributes can also use *= or $= or ~= for some unusual selectors...
+
+PSEUDO CLASSES ... keyword added to a selector that specifies a special state of the selected elements...
+:active
+:checked
+:first
+:first-child
+:hover
+:not()
+:nth-child()
+:nth-of-type()
+
+button:hover {
+  color: red
+}
+
+PSEUDO ELEMENTS ... keyword added to a selector that lets you style a particular part of selected element(s)
+::after
+::before
+::first-letter
+::first-line
+::selection
+
+
+*/
