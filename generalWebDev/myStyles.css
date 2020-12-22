@@ -100,5 +100,11 @@ PSEUDO ELEMENTS ... keyword added to a selector that lets you style a particular
 ::first-line
 ::selection
 
+PSEUDO CLASSES ARE PRIMARILY "STATES", PSEUDO ELEMENTS PRIMARILY "PARTS"
+
+SELECTORS THAT ARE MORE SPECIFIC WILL ALWAYS "WIN" OVER SELECTORS THAT ARE MORE GENERAL
+  ID > CLASS, ATTRIBUTE, and PSEUDO-CLASS SELECTORS > ELEMENT and PSEUDO-ELEMENT SELECTORS 
+
+  check out specificity calculator if you need more info... specificity.keegan something or other...
 
 */
