@@ -10,8 +10,8 @@ div {
 }
 
 #thatSection {
-  /* border-radius: 50%; */
-  /* transform: scale(.5, .9); */
+  border-radius: 50%;
+  /* transform: scale(.5, .5); */
 
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
@@ -21,14 +21,14 @@ div {
 
 #thang1 {
   border-color: black;
-  
+  /* background-size: cover; */
   opacity: .5;
-  /* border-radius: 50%; */
+  border-radius: 90%;
   /* border-color: red;
   border-width: 10px; */
-  /* transform: scale(1, 1); */
-  /* background-color: black;
-  transform: skewY(40deg);  */
+  /* transform: scale(.5, .9); */
+  /* background-color: black; */
+  transform: skewY(40deg);
 }
 
 @keyframes gradient {
