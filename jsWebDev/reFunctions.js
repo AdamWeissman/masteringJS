@@ -37,3 +37,16 @@ function callTwice(f, ...args) {
 }
 
 callTwice(add, 7, 3)
+
+
+// FACTORY FUNCTION ... to return another function...
+
+function makeBetweenFunc(min, max) {
+  return function (num) {
+    return (num >= min && num <= max) ? true : false 
+  }
+}
+
+const seniorCitizen = makeBetweenFunc(65, 120)
+console.log("40", seniorCitizen(40))
+console.log("70", seniorCitizen(70))
