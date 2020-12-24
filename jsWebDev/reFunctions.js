@@ -23,6 +23,17 @@ function add(x, y) {
   return x + y
 }
 
-const add = function (x, y) {
-  return x + y
+// const add = function (x, y) {
+//   return x + y
+// }
+
+function sayHello() {
+  console.log("hi")
 }
+
+function callTwice(f, ...args) {
+  console.log(f(args[0], args[1]));
+  console.log(f(args[0], args[1]));
+}
+
+callTwice(add, 7, 3)
