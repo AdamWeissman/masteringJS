@@ -50,3 +50,32 @@ function makeBetweenFunc(min, max) {
 const seniorCitizen = makeBetweenFunc(65, 120)
 console.log("40", seniorCitizen(40))
 console.log("70", seniorCitizen(70))
+
+const nums = [1,2,3,5,8,13]
+
+
+
+nums.forEach(function (element) {
+  console.log(element)
+})
+
+const movies = [
+  {
+    title: "Hollywood 1",
+    rating: 1
+  },
+  {
+    title: "Hollywood 2",
+    rating: 9
+  },
+  {
+    title: "Hollywood 3",
+    rating: 5
+  }
+] 
+
+const titles = movies.map(function(movie) {
+  return movie.title
+});
+
+console.log(titles)
