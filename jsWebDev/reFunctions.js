@@ -78,4 +78,15 @@ const titles = movies.map(function(movie) {
   return movie.title
 });
 
+const ratings = movies.map((m) => {
+  return m.rating
+});
+
+
 console.log(titles)
+console.log(ratings)
+
+
+const implicitFunctionExample = () => (console.log('use parens instead of brackets, or do it one line without any parens'))
+
+implicitFunctionExample()
