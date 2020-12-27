@@ -15,5 +15,8 @@ const movies = [
   }
 ]
 
-const moviesAfter1980 = movie.filter(m => m.year >= 1980).map(m.title)
+const moviesAfter1980 = movies
+  .filter(m => m.year >= 1980)
+  .map(m => m.title)
+  
 console.log(moviesAfter1980)
