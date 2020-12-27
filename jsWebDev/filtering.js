@@ -20,3 +20,5 @@ const moviesAfter1980 = movies
   .map(m => m.title)
   
 console.log(moviesAfter1980)
+
+document.getElementById
